@@ -84,7 +84,7 @@ mysqli_close($link);// finito le operazioni chiudo la connessione
             ?>
         <div class="content">
             <?php
-            // qui cicliamo la risorsa di database e stampiamo titolo, excerpt e bottone more
+            // qui clicchiamo la risorsa di database e stampiamo titolo, excerpt e bottone more
             /*
              while è uno dei costrutti per controllare un ciclo
              il ciclo continuerà a ripetersi finchè l'espressione tra parentesi rimane vera
@@ -107,7 +107,10 @@ mysqli_close($link);// finito le operazioni chiudo la connessione
              dove $result sarà la varibile in cui è stata salvata la risorsa e 0 la prima riga della risorsa
              
             */
-            while($row = mysqli_fetch_assoc($result)){
+            // 1. eventuale contatore che incrementa di uno si scrivera' cosi :
+            // 1. $i=0;
+            // 1. while($i<=10){
+                while($row = mysqli_fetch_assoc($result)){
                 echo'<article>';
                 echo '<h2>'.$row['title'].'</h2>';
                 /*['title'] corrisponde al valore della colonna title in questa riga della risorsa*/
@@ -124,7 +127,12 @@ mysqli_close($link);// finito le operazioni chiudo la connessione
                 il parametro verrà usato in una query per individuare un record preciso
                 nella tabella posts
                 */
-               echo'</article>';     
+               echo'</article>'; 
+           //  1.  incrementami di uno si puo' fare come segue'
+           //  1.  $i++
+           //  1.  oppure si incrementa scrivendo cosi ...
+           //  1.  $i=$i+1;        
+                       
             }
 
             ?>

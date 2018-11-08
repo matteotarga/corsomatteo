@@ -23,9 +23,9 @@ $array=array(
     'index.php' sarà la destinazione del link che verrà generato con la funzione buildmenu
     ed apparirà quindi nella proprietà href del link 
     */
-    'Home'=>'/php/corso/index.php',
-    'il mio blog'=>'/php/corso/blog.php',
-    'Login'=>'/php/corso/login.php'
+    'Home'=>'/corsomatteo/index.php',
+    'il mio blog'=>'/corsomatteo/blog.php',
+    'Login'=>'/corsomatteo/login.php'
     /*
     
     ## ESERCIZIO ##: fare in modo che l'array sia generato leggendo il DB usando i post di tipo page
@@ -38,7 +38,7 @@ if(isset($COOKIE["LOGIN"])){
     // la sintassi che segue $array['admin'] aggiunge una riga all'array $array assegnando
     // alla chiave 'admin', che non esisteva ancora, il valore a destra dell'uguale
     
-    $array['admin'] = '/php/corso/admin/admin.php';
+    $array['admin'] = '/php/corsomatteo/admin/admin.php';
     
     // è l'equivalente, più breve, della funzione array_push
 }
@@ -47,7 +47,7 @@ if(isset($COOKIE["LOGIN"])){
 
 $arrayAdmin=array(
     'Pagine'=>'#',
-    'Post'=>'/php/corso/admin/adminPost.php'
+    'Post'=>'/php/corsomatteo/admin/adminPost.php'
 );
 
 function buildmenu ($idwrapper, $array){
@@ -138,7 +138,7 @@ function buildmenu ($idwrapper, $array){
 
 function excerpt($string,$length)
 {
-    /*  Questa funzione serve a crare un excerpt, una versione accorciata di un testo,
+    /*  Questa funzione serve a creare un excerpt, che è una versione accorciata di un testo,
         un riassunto...
         prevede due parametri:
         
